@@ -42,11 +42,11 @@ data "aws_region" "current" {}
 
 locals {
   tags = {
-    created-by = "eks-workshop-v2"
+    created-by = "kolizo"
     env        = local.environment_name
   }
 
-  prefix           = "eks-workshop"
+  prefix           = "eks-dev"
   environment_name = var.environment_suffix == "" ? local.prefix : "${local.prefix}-${var.environment_suffix}"
   shell_role_name  = "${local.environment_name}-shell-role"
   map_roles = [for i, r in var.eks_role_arns : {
