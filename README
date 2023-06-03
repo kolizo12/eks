@@ -28,3 +28,7 @@ locals {
 
   prefix           = "eks-dev"
 *\
+
+#Run the terraform 
+cd /dev
+terraform apply
